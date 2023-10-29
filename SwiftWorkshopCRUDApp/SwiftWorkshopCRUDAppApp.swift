@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct SwiftWorkshopCRUDAppApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ToDoListView()
+                .modelContainer(for: ToDo.self) // Indicate a list of models in array if you have more than one!
         }
     }
 }
