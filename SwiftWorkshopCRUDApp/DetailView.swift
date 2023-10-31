@@ -10,34 +10,32 @@ import SwiftData
 
 struct DetailView: View {
     @Environment(\.dismiss) private var dismiss
-    @Environment(\.modelContext) var modelContext
+    @Environment(\.modelContext) var modelContext // Add model context
     @State var toDo: ToDo
     
     var body: some View {
-        List {
+        VStack {
             TextField("Enter To Do Here", text: $toDo.item)
                 .font(.title)
                 .textFieldStyle(.roundedBorder)
                 .padding(.vertical)
-                .listRowSeparator(.hidden)
             Toggle("Set Reminder:", isOn: $toDo.reminderIsOn)
                 .padding(.top)
-                .listRowSeparator(.hidden)
             DatePicker("Date", selection: $toDo.dueDate)
-                .listRowSeparator(.hidden)
                 .padding(.bottom)
                 .disabled(!toDo.reminderIsOn)
-            Text("Notes:")
+            HStack {
+                Text("Notes:")
+                Spacer()
+            }
                 .padding(.top)
             TextField("Notes", text: $toDo.notes, axis: .vertical)
                 .textFieldStyle(.roundedBorder)
-                .listRowSeparator(.hidden)
             Toggle("Completed:", isOn: $toDo.isCompleted)
                 .padding(.top)
-                .listRowSeparator(.hidden)
-            
+            Spacer()
         }
-        .listStyle(.plain)
+        .padding()
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button("Cancel") {

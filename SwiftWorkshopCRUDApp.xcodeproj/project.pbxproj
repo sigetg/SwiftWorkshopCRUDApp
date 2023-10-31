@@ -13,7 +13,6 @@
 		DA37B3312AE74DE50082BF18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA37B3302AE74DE50082BF18 /* Preview Assets.xcassets */; };
 		DA37B3382AE74E3E0082BF18 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37B3372AE74E3E0082BF18 /* ToDo.swift */; };
 		DA37B33A2AE7673C0082BF18 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37B3392AE7673C0082BF18 /* DetailView.swift */; };
-		DA596E6E2AEAD4F60073EFE8 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA596E6D2AEAD4F60073EFE8 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +23,6 @@
 		DA37B3302AE74DE50082BF18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA37B3372AE74E3E0082BF18 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		DA37B3392AE7673C0082BF18 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		DA596E6D2AEAD4F60073EFE8 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				DA37B3292AE74DE20082BF18 /* SwiftWorkshopCRUDAppApp.swift */,
-				DA37B32B2AE74DE20082BF18 /* ToDoListView.swift */,
-				DA596E6D2AEAD4F60073EFE8 /* SwiftUIView.swift */,
 				DA37B3372AE74E3E0082BF18 /* ToDo.swift */,
+				DA37B32B2AE74DE20082BF18 /* ToDoListView.swift */,
 				DA37B3392AE7673C0082BF18 /* DetailView.swift */,
 				DA37B32D2AE74DE50082BF18 /* Assets.xcassets */,
 				DA37B32F2AE74DE50082BF18 /* Preview Content */,
@@ -150,7 +147,6 @@
 				DA37B33A2AE7673C0082BF18 /* DetailView.swift in Sources */,
 				DA37B32A2AE74DE20082BF18 /* SwiftWorkshopCRUDAppApp.swift in Sources */,
 				DA37B3382AE74E3E0082BF18 /* ToDo.swift in Sources */,
-				DA596E6E2AEAD4F60073EFE8 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
