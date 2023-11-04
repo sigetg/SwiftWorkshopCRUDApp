@@ -10,19 +10,19 @@ import SwiftData
 
 @Model // Right click and choose show macro to show some more detailed code added automatically by apple!
 class ToDo: Identifiable {
-    var id = UUID().uuidString
-    var item = ""
-    var reminderIsOn = false
-    var dueDate = Date.now + (60*60*24)
-    var notes = ""
-    var isCompleted = false
+    var id: String
+    var item: String
+    var reminderIsOn: Bool
+    var dueDate: Date
+    var notes: String
+    var isCompleted: Bool
     
     init() {
-//        self.id = UUID().uuidString
-//        self.item = item
-//        self.reminderIsOn = reminderIsOn
-//        self.dueDate = dueDate
-//        self.notes = notes
-//        self.isCompleted = isCompleted
+        self.id = UUID().uuidString
+        self.item = ""
+        self.reminderIsOn = false
+        self.dueDate = Date.now + (60*60*24)
+        self.notes = ""
+        self.isCompleted = false
     }
 }
