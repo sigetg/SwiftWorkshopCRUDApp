@@ -5,12 +5,11 @@
 //  Created by George Sigety on 10/23/23.
 //
 
-import Foundation
-import SwiftData
+import Foundation // allows us to access the current date
+import SwiftData // allows us to use Apple's built-in database for data persistence
 
-@Model // Right click and choose show macro to show some more detailed code added automatically by apple!
-class ToDo: Identifiable {
-    var id: String
+@Model // right click and choose show macro to show some more detailed code added automatically by Apple!
+class ToDo {
     var item: String
     var reminderIsOn: Bool
     var dueDate: Date
@@ -18,7 +17,6 @@ class ToDo: Identifiable {
     var isCompleted: Bool
     
     init() {
-        self.id = UUID().uuidString
         self.item = ""
         self.reminderIsOn = false
         self.dueDate = Date.now + (60*60*24)
