@@ -10,22 +10,24 @@ import SwiftData
 
 struct ToDoListView: View {
     @State private var sheetIsPresented = false // controls weather the sheet is showing on top of the page
-    @Query var toDos : [ToDo] //query list of toDos from database
-    @Environment(\.modelContext) var modelContext // Add model context
+    @Query private var toDos : [ToDo] //query list of toDos from database
+    @Environment(\.modelContext) private var modelContext // Add model context
     
     var body: some View {
         NavigationStack { // Stack that keeps track of the navigation within your app
-            List(toDos) { toDo in
-//                Text("String")
-                NavigationLink { // Links to a detail view for each of your toDos in the list
-                    DetailView(toDo: toDo)
-                } label: { // label of the link
-                    Text(toDo.item)
-                }
-                .font(.title2)
-                .swipeActions { // creates swipe actions on each list item
-                    Button("Delete", role: .destructive) {
-                        modelContext.delete(toDo) // deletes list item from database using your modelContext object's delete method
+            List {
+                ForEach(toDos) { toDo in
+                    //Text("String")
+                    NavigationLink { // Links to a detail view for each of your toDos in the list
+                        DetailView(toDo: toDo)
+                    } label: { // label of the link
+                        Text(toDo.item)
+                    }
+                    .font(.title2)
+                    .swipeActions { // creates swipe actions on each list item
+                        Button("Delete", role: .destructive) {
+                            modelContext.delete(toDo) // deletes list item from database using your modelContext object's delete method
+                        }
                     }
                 }
             }

@@ -17,12 +17,12 @@ class ToDo: Identifiable {
     var notes = ""
     var isCompleted = false
     
-    init(id: String = UUID().uuidString, item: String = "", reminderIsOn: Bool = false, dueDate: Date = Date.now + (60*60*24), notes: String = "", isCompleted: Bool = false) {
-        self.id = UUID().uuidString
-        self.item = item
-        self.reminderIsOn = reminderIsOn
-        self.dueDate = dueDate
-        self.notes = notes
-        self.isCompleted = isCompleted
+    init() {
+//        self.id = UUID().uuidString
+//        self.item = item
+//        self.reminderIsOn = reminderIsOn
+//        self.dueDate = dueDate
+//        self.notes = notes
+//        self.isCompleted = isCompleted
     }
 }
