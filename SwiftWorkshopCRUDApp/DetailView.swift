@@ -49,6 +49,8 @@ struct DetailView: View {
 }
 
 #Preview {
-    DetailView(toDo: ToDo())
-        .modelContainer(for: ToDo.self)
+    NavigationStack {
+        DetailView(toDo: ToDo())
+            .modelContainer(for: ToDo.self)
+    }
 }

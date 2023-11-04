@@ -35,7 +35,7 @@ struct ToDoListView: View {
                 }
             }
             .navigationTitle("To Do List") // determines the title of the List
-            .listStyle(.plain) // determines style of the List
+            .listStyle(.plain) // determines style of the List .sidebar
             .toolbar { // the toolbar allows us to make button items along the top or the bottom of the screen
                 ToolbarItem(placement: .topBarTrailing) { // in this case there will be a button on the top right side
                     Button {
@@ -57,4 +57,5 @@ struct ToDoListView: View {
 // setting up for preview section
 #Preview {
     ToDoListView()
+        .modelContainer(for: ToDo.self, inMemory: true)
 }
